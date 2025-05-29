@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding-top: 90px;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header-button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 2px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .header-button:hover {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .contact-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section p {
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .contact-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-card span {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-card.whatsapp {
+    border: 2px solid #25D366;
+  }
+  
+  .contact-card.facebook {
+    border: 2px solid #3b5998;
+  }
+  
+  @media (max-width: 600px) {
+    .contact-card {
+      width: 100%;
+    }
+  }

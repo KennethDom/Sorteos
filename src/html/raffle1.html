@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rifa 5k - RIFA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../css/styles-raffle-all.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">RIFAS</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="#">Como Participar</a></li>
+        <li><a href="raffles.html">Rifas Disponibles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="raffle-section">
+    <h1 class="raffle-title">PARTICIPA POR $5000MX </h1>
+    <p class="raffle-subtitle">  
+      <span class="triangle-icon">▼</span>
+      Lista de Boletos Abajo 
+      <span class="triangle-icon">▼</span>
+    </p>
+
+    <section class="slider-wrapper">
+      <div class="slider" id="slider">
+        <img src="../../images/image-rifa5k1.jpg" alt="Imagen 1" />
+        <img src="../../images/image-rifa5k2.jpg" alt="Imagen 2" />
+        <img src="../../images/image-rifa5k3.jpg" alt="Imagen 3" />
+      </div>
+      <div class="slider-dots" id="slider-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </section>
+
+    <p class="ticket-info">
+      1 BOLETO POR $30 (2 oportunidades)<br>
+      2 BOLETOS POR $60 (4 oportunidades)<br>
+      3 BOLETOS POR $90 (6 oportunidades)<br>
+      5 BOLETOS POR $150 (10 oportunidades)<br>
+      10 BOLETOS POR $300 (20 oportunidades)
+    </p>
+    <p class="bonus-info">
+      Con tu boleto liquidado participas por:<br>
+      1.- $5000mx - 00/00/00<br>
+      <br>
+      <strong>BONOS:</strong><br>
+      SI COMPRAS 10 BOLETOS O MÁS<br>
+      <strong>TE LLEVAS BONO DE:<br>
+      $500</strong>
+      <br>
+      (PAGANDO EN LA PRIMERA HORA DE APARTADO Y SI GANAS EL PREMIO)
+    </p>
+    <br>
+    <p class="raffle-subtitle">  
+      <span class="triangle-icon">▼</span>
+      HAZ CLICK EN TU BOLETO DE LA SUERTE
+      <span class="triangle-icon">▼</span>
+    </p>
+  </section>
+
+  <section class="search-section">
+    <div class="search-item">
+      <input type="text" class="search-input" placeholder="Buscar número..." id="searchNumber">
+    </div>
+    <div class="search-item">
+      <button class="search-btn" onclick="openModal()">Ruleta Aleatoria</button>
+    </div>
+  </section>
+  
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Boletos a Generar</h2>
+      <select id="ticketCount" class="ticket-dropdown" onchange="updateGenerateButtonText()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <button id="generateBtn" class="generate-btn" onclick="generateTicket()">Haz clic aquí para generar 1 boleto</button>
+      <div id="generatedTickets"></div> 
+      <button class="select-btn" id="selectTicketsBtn" style="display: none; margin-top: 1rem;">Seleccionar boletos</button>
+      <button class="close-btn" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+  <div class="ticket-legend">
+    <button class="legend-btn" disabled></button>
+    <span class="legend-text">= No Disponible</span>
+  </div>
+  <div class="ticket-buttons" id="ticketContainer">
+    <!-- Aquí se genenan los 100 botones -->
+  </div>
+  
+  <script src="../js/function-raffle-all.js"></script>
+</body>
+</html>
